@@ -1,4 +1,4 @@
-package com.prashanth.os.design.patterns.consumer.chaining.function;
+package com.prashanth.os.design.patterns.chaining.function;
 
 import java.util.Objects;
 
