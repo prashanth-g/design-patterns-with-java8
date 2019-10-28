@@ -10,4 +10,8 @@ public interface Predicate<T> {
         Objects.requireNonNull(other);
         return (T t) -> this.test(t) && other.test(t);
     }
+
+    default Predicate<T> negate() {
+        return (T t) -> !this.test(t);
+    }
 }
