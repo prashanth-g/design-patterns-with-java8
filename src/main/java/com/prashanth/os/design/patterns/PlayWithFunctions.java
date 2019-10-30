@@ -6,11 +6,13 @@ public class PlayWithFunctions {
     public static void main(String[] args) {
         Meteo mateo = new Meteo(20);
 
-        Function<Meteo, Integer> readCelcius = m -> m.getTemperature();
-        Function<Integer, Double> convertToFarenheit = temperature -> (temperature * 9d / 5d) + 32d;
+        Function<Meteo, Integer> readCelsius = m -> m.getTemperature();
+        Function<Integer, Double> convertToFahrenheit = temperature -> (temperature * 9d / 5d) + 32d;
 
-        Function<Meteo, Double> readFarenheit = readCelcius.andThen(convertToFarenheit);
+        Function<Meteo, Double> readFahrenheit = readCelsius.andThen(convertToFahrenheit);
 
-        System.out.println(readFarenheit.apply(mateo));
+        readFahrenheit = convertToFahrenheit.compose(readCelsius);
+
+        System.out.println(readFahrenheit.apply(mateo));
     }
 }
