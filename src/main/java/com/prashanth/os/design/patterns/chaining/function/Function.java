@@ -8,6 +8,9 @@ import java.util.Objects;
 public interface Function<T, R> {
     R apply(T t);
 
+    /**
+     *  First apply the first function and apply the second function
+     */
     default <V> Function<T, V> andThen(Function<R, V> other) {
         Objects.requireNonNull(other);
         return (T t) -> {
@@ -16,7 +19,11 @@ public interface Function<T, R> {
         };
     }
 
+    /**
+     *  Apply the first function to the result of function passed as a parameter
+     */
     default <V> Function<V, R> compose(Function<V, T> other) {
+        Objects.requireNonNull(other);
         return (V v) -> {
             T t = other.apply(v);
             return this.apply(t);
