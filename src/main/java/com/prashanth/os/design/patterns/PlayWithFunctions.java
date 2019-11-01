@@ -14,5 +14,8 @@ public class PlayWithFunctions {
         readFahrenheit = convertToFahrenheit.compose(readCelsius);
 
         System.out.println(readFahrenheit.apply(mateo));
+
+        // Static methods can be used as factory methods
+        Function<String, String> identity = Function.identity();
     }
 }

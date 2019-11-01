@@ -30,4 +30,8 @@ public interface Function<T, R> {
         };
     }
 
+    static <T> Function<T, T> identity() {
+        return t -> t;
+    }
+
 }
