@@ -20,4 +20,15 @@ public interface Comparator<T> {
     default Comparator<T> reversed() {
         return (t1, t2) -> this.compare(t2, t1);
     }
+
+    default Comparator<T> thenComparing(Comparator<T> other) {
+        Objects.requireNonNull(other);
+        return (T t1, T t2) -> {
+            int compare = this.compare(t1, t2);
+            if(compare == 0) {
+                compare =  other.compare(t1, t2);
+            }
+            return compare;
+        };
+    }
 }
