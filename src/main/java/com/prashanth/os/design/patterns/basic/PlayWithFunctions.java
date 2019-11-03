@@ -1,6 +1,4 @@
-package com.prashanth.os.design.patterns;
-
-import com.prashanth.os.design.patterns.chaining.function.Function;
+package com.prashanth.os.design.patterns.basic;
 
 public class PlayWithFunctions {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package com.prashanth.os.design.patterns;
+package com.prashanth.os.design.patterns.basic;
 
-import com.prashanth.os.design.patterns.chaining.function.Consumer;
+import com.prashanth.os.design.patterns.basic.Consumer;
 
 public class PlayWithConsumers {
     public static void main(String[] args) {

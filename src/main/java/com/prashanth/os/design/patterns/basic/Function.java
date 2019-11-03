@@ -1,6 +1,4 @@
-package com.prashanth.os.design.patterns.chaining.function;
-
-import com.prashanth.os.design.patterns.Meteo;
+package com.prashanth.os.design.patterns.basic;
 
 import java.util.Objects;
 

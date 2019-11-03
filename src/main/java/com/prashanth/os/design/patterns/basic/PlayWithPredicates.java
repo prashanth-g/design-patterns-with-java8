@@ -1,6 +1,6 @@
-package com.prashanth.os.design.patterns;
+package com.prashanth.os.design.patterns.basic;
 
-import com.prashanth.os.design.patterns.chaining.function.Predicate;
+import com.prashanth.os.design.patterns.basic.Predicate;
 
 public class PlayWithPredicates {
     public static void main(String[] args) {

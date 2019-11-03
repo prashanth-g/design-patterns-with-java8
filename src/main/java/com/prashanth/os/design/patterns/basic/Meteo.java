@@ -1,4 +1,4 @@
-package com.prashanth.os.design.patterns;
+package com.prashanth.os.design.patterns.basic;
 
 public class Meteo {
     private int temperature;

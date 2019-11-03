@@ -1,4 +1,4 @@
-package com.prashanth.os.design.patterns.chaining.function;
+package com.prashanth.os.design.patterns.basic;
 
 import java.util.Objects;
 
