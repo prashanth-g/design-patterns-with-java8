@@ -17,10 +17,11 @@ public class PlayingWithComparators {
 
         Comparator<Person> compareName = Comparator.comparing(getName);
         Comparator<Person> compareAge = Comparator.comparing(getAge);
+        Comparator<Person> compareNameReversed = compareName.reversed();
 
         Comparator<Person> cmp = compareName.thenComparing(compareAge);
-
-        Comparator<Person> compareNameReversed = compareName.reversed();
+        Comparator<Person> cmp2 = Comparator.comparing(Person::getName)
+                .thenComparing(Person::getAge);
 
         System.out.println("1 : Compare -> Mougli > Beem: " + (comparator.compare(mougli, beem) > 0));
         System.out.println("2 : Compare -> Beem > Tina: " + (comparator.compare(beem, tina) > 0));
@@ -28,7 +29,6 @@ public class PlayingWithComparators {
         System.out.println("4 : Compare Age -> Mougli > Beem: " + (compareAge.compare(mougli, beem) > 0));
 
         System.out.println("5 : Compare Chained -> Mougli > Mougli2: " + (cmp.compare(mougli, mougli2) > 0));
+        System.out.println("6 : Comparator thenComparing as Readable -> Mougli > Mougli2: " + (cmp2.compare(mougli, mougli2) > 0));
     }
-
-
 }

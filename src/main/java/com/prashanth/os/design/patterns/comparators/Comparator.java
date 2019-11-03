@@ -31,4 +31,10 @@ public interface Comparator<T> {
             return compare;
         };
     }
+
+    default <U extends Comparable<U>> Comparator<T> thenComparing(Function<T, U> keyExtractor) {
+        Objects.requireNonNull(keyExtractor);
+        Comparator<T> other = comparing(keyExtractor);
+        return this.thenComparing(other);
+    }
 }
