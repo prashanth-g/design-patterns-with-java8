@@ -1,6 +1,5 @@
 package com.prashanth.os.design.patterns.factory;
 
-import java.awt.*;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.Supplier;
